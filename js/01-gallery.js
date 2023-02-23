@@ -23,6 +23,8 @@ for (let i = 0; i < galleryItems.length; i++) {
 
   div.addEventListener("click", (e) => {
     e.preventDefault();
+    console.log(e.target.dataset.source);
+
     const instance = basicLightbox.create(
       `<img src=${galleryItems[i].original} width="800" height="600">`
     );
