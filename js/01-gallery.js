@@ -9,11 +9,14 @@ for (let i = 0; i < galleryItems.length; i++) {
   image.src = galleryItems[i].preview;
   image.alt = galleryItems[i].description;
   image.setAttribute("data-source", `${galleryItems[i].original}`);
+
   const link = document.createElement("a");
   link.classList = "gallery__link";
   link.href = galleryItems[i].original;
+
   const div = document.createElement("div");
   div.classList = "gallery__item";
+
   link.append(image);
   div.append(link);
   gallery.append(div);
